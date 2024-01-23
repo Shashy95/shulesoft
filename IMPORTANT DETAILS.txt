@@ -2,6 +2,12 @@ I created a system where admin create products with prices .
 
 User can register and logins to view products and make purchase.
 
+STEPS ON INSTALLING
+import sql
+composer update
+migrate table
+seed the database
+
 Sandbox credential for payment purpose-PAYPAL
 
 email:sb-09tfb29303658@personal.example.com
@@ -11,6 +17,3 @@ Admin credentials
 email:admin@gmail.com
 password:password
 
-User credentials for tests
-email:info@test.co.tz
-password:12345678

@@ -14,7 +14,8 @@ class GenerateReport extends Command
      *
      * @var string
      */
-    protected $signature = 'report:generate {start_date} {end_date}';
+    //protected $signature = 'report:generate {start_date} {end_date}';
+    protected $signature = 'report:generate';
 
     /**
      * The console command description.
@@ -40,8 +41,11 @@ class GenerateReport extends Command
      */
     public function handle()
     {
-        $startDate = Carbon::parse($this->argument('start_date'))->startOfDay();
-        $endDate = Carbon::parse($this->argument('end_date'))->endOfDay();
+        //$startDate = Carbon::parse($this->argument('start_date'))->startOfDay();
+        //$endDate = Carbon::parse($this->argument('end_date'))->endOfDay();
+
+        $startDate = '2024-01-01';
+        $endDate = '2024-01-31';
 
         $users = UserActivityLog::whereBetween('activity_time', [$startDate, $endDate])
             ->get()
